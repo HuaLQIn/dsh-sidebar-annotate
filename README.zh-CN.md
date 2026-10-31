@@ -170,6 +170,12 @@ dsh plugin --profile <你的 profile> remove dsh-sidebar-annotate
 
 Codex 桌面版的批注功能（内部代号 popcorn）从它自己的 `app.asar` 里读出，作为视觉参照：强调色 `#339CFF`、2px 蓝色虚线选框加 10% 淡填、`border-radius: 50% 50% 50% 3px` 的编号标记、热点 13,12 的自定义 SVG 光标，以及胶囊容器（`rounded-full`、半透明、背景模糊、1px 细环）。没有拷贝任何代码，只借了视觉语言。
 
+## 参与与安全
+
+- 怎么改、提 PR 前查什么：[CONTRIBUTING.md](CONTRIBUTING.md)
+- 私下报告安全问题：[SECURITY.md](SECURITY.md)
+- 社区行为约定：[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
 ## 许可证
 
 MIT，见 [LICENSE](LICENSE)。
