@@ -168,6 +168,12 @@ Or delete the dependency line and the `dsh.profile.bundles` entry from the profi
 
 The annotation feature inside the Codex desktop app (internal codename *popcorn*) was read from its own `app.asar` and used as the visual reference: accent `#339CFF`, 2 px dashed selection outline with 10 % fill, marker with `border-radius: 50% 50% 50% 3px`, a custom SVG cursor with hotspot 13,12, and the caption capsule (`rounded-full`, translucent, backdrop blur, 1 px ring). No code was copied — only the visual language.
 
+## Contributing and security
+
+- How to make a change and what to check first: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Reporting a vulnerability privately: [SECURITY.md](SECURITY.md)
+- Community expectations: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
