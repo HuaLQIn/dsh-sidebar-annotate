@@ -1,0 +1,82 @@
+name: Bug report
+description: Something broke while annotating an image
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Two fields decide whether this can be reproduced at all: the host version and the exact steps. Please fill both.
+
+  - type: input
+    id: dsh-version
+    attributes:
+      label: DeepSeek Harness version
+      description: Shown at the bottom of the settings page, or in the window title.
+      placeholder: 0.2.1-rc.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Which build
+      options:
+        - Desktop app
+        - Browser (dsh web)
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: The version in the plugin list, or the `version` field in the installed package.json.
+      placeholder: 0.6.2
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered, starting from opening the sidebar. Say which tool was selected and where you pressed.
+      placeholder: |
+        1. Open an image in the right sidebar
+        2. Click Annotate
+        3. Select the rectangle tool
+        4. Drag from the top-left corner
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+      description: If the layer did not open at all, say whether the Annotate button appeared.
+    validations:
+      required: true
+
+  - type: input
+    id: image
+    attributes:
+      label: Image dimensions and format
+      description: Filled in from the preview header, e.g. 1280x800 PNG — matters because export is capped at 4096 px on the longest side.
+      placeholder: 1280x800 PNG
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I fully quit and reopened the host after installing (a window reload does not load a new client bundle)
+          required: true
+        - label: I checked that `window.__DSH_BOOT__.entries` contains `dsh-sidebar-annotate`
+          required: false
