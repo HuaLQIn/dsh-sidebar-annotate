@@ -1,0 +1,58 @@
+{
+  "name": "dsh-sidebar-annotate",
+  "version": "0.6.2",
+  "type": "module",
+  "description": "Annotate images in place inside the DeepSeek Harness right sidebar — mark, draw, arrow, rectangle, square, triangle, then send the composited image plus a numbered note list back to the conversation. / 在 DSH 右侧边栏原地批注图片，合成图与编号说明一起发回对话。",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "docs",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "annotation",
+    "annotate",
+    "image",
+    "screenshot",
+    "sidebar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuaLQIn/dsh-sidebar-annotate.git"
+  },
+  "homepage": "https://github.com/HuaLQIn/dsh-sidebar-annotate#readme",
+  "bugs": {
+    "url": "https://github.com/HuaLQIn/dsh-sidebar-annotate/issues"
+  },
+  "author": "HuaLQIn",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-session"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
