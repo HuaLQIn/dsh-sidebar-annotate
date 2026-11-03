@@ -2,6 +2,24 @@
 
 All notable changes to this project. Format loosely follows [Keep a Changelog](https://keepachangelog.com/); versions follow the plugin's own `package.json`.
 
+## [0.7.0] — 2026-11-02
+
+### Added
+- **Eraser** (`E`). Drag to erase; the diameter follows the width slider (width × 4). It removes ink, not the image underneath.
+- **Arc tool** (`C`). Drag an arc — the more your path bends, the more the arc bends. Degenerates into a straight line when the three points are collinear or the radius is absurd.
+- **Line tool** (`L`) with `Shift` snapping to 45° multiples.
+- **Shape menu.** Rectangle, square, triangle, ellipse, diamond, star and heart collapse into one toolbar cell with a pop-over; each still has its own key (`R S T O D G H`).
+- **Zoom and pan.** Wheel zooms 1×–6× anchored at the pointer, hold `Space` and drag to pan, `0` resets. The official previewer scales with a transform and produces no scrollbar, so zooming alone only ever showed the top-left corner; during annotation the plugin takes over the image transform and restores it on exit.
+
+### Fixed
+- The eraser used to delete a whole stroke. It now erases by diameter — strokes are recorded as paths and punched out with `destination-out`.
+- Undo is snapshot-based, so erasing and deleting are undoable. The previous index-based scheme could not see a deletion at all.
+- An empty note no longer falls back to "请看这张图上标了编号的位置". When nothing is numbered, the image is sent with no text.
+- Export composites ink on a separate layer before erasing, so the source image is never punched through.
+
+### Changed
+- Snap threshold 8 px → 10 px; endpoints were sometimes hard to catch.
+
 ## [0.6.2] — 2026-10-31
 
 ### Changed
