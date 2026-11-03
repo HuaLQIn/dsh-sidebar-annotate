@@ -2,9 +2,9 @@
 
 English · [简体中文](README.zh-CN.md)
 
-Annotate images in place inside the DeepSeek Harness right sidebar: mark, draw, arrow, rectangle, square, triangle → the composited image plus a numbered note list goes back to the conversation.
+Annotate images in place inside the DeepSeek Harness right sidebar: mark, draw, line, arrow, seven shapes, arc and eraser → the composited image plus a numbered note list goes back to the conversation. Zoom in with the wheel to work on details, hold `Space` to pan, and the image is restored when you close the layer.
 
-Maintained by HuaLQIn · First released on 2026-10-31 (v0.6.2). Where to report issues: [this repository's issues](https://github.com/HuaLQIn/dsh-sidebar-annotate/issues).
+Maintained by HuaLQIn · First released on 2026-10-31 (v0.7.0). Where to report issues: [this repository's issues](https://github.com/HuaLQIn/dsh-sidebar-annotate/issues).
 
 ## What it does
 
