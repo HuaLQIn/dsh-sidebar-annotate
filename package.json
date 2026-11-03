@@ -1,6 +1,6 @@
 {
   "name": "dsh-sidebar-annotate",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "type": "module",
   "description": "Annotate images in place inside the DeepSeek Harness right sidebar — mark, draw, arrow, rectangle, square, triangle, then send the composited image plus a numbered note list back to the conversation. / 在 DSH 右侧边栏原地批注图片，合成图与编号说明一起发回对话。",
   "main": "lib/index.js",
